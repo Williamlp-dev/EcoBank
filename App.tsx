@@ -1,13 +1,21 @@
 import './gesture-handler';
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Home from './src/pages/home';
-
+import { useFonts } from 'expo-font';
 import Routes from './src/routes/index.routes';
 import { NavigationContainer } from '@react-navigation/native'
 
 
 export default function App() {
+
+  const [loaded] = useFonts({
+    Poppins: require('@/assets/fonts/Poppins-Regular.ttf'),
+    PoppinsSemiBold: require('@/assets/fonts/Poppins-SemiBold.ttf'),
+  });
+
+  if (!loaded) {
+    return null;
+  }
+
   return (
     <NavigationContainer>
       <Routes />
