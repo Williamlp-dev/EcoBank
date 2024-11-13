@@ -65,18 +65,15 @@ export default function Routes() {
                 name="Register"
                 component={Register}
                 options={{
-                    cardStyleInterpolator: ({ current }) => {
+                    cardStyleInterpolator: ({ current, layouts }) => {
+                        const translateX = current.progress.interpolate({
+                            inputRange: [0, 1],
+                            outputRange: [-layouts.screen.width, 0], // Animação de translação horizontal
+                        });
                         return {
                             cardStyle: {
                                 opacity: current.progress,
-                                transform: [
-                                    {
-                                        scale: current.progress.interpolate({
-                                            inputRange: [0, 1],
-                                            outputRange: [0.95, 1],
-                                        }),
-                                    },
-                                ],
+                                transform: [{ translateX }],
                             },
                         };
                     },
@@ -88,35 +85,33 @@ export default function Routes() {
                 component={Login}
                 options={{
                     cardStyleInterpolator: ({ current, layouts }) => {
-                        const translateY = current.progress.interpolate({
+                        const translateX = current.progress.interpolate({
                             inputRange: [0, 1],
-                            outputRange: [layouts.screen.height, 0],
+                            outputRange: [-layouts.screen.width, 0],
                         });
                         return {
                             cardStyle: {
                                 opacity: current.progress,
-                                transform: [{ translateY }],
+                                transform: [{ translateX }],
                             },
                         };
                     },
                 }}
             />
+
             <Stack.Screen
                 name="Success"
                 component={Sucess}
                 options={{
-                    cardStyleInterpolator: ({ current }) => {
+                    cardStyleInterpolator: ({ current, layouts }) => {
+                        const translateX = current.progress.interpolate({
+                            inputRange: [0, 1],
+                            outputRange: [layouts.screen.width, 0],
+                        });
                         return {
                             cardStyle: {
                                 opacity: current.progress,
-                                transform: [
-                                    {
-                                        rotate: current.progress.interpolate({
-                                            inputRange: [0, 1],
-                                            outputRange: ["90deg", "0deg"],
-                                        }),
-                                    },
-                                ],
+                                transform: [{ translateX }],
                             },
                         };
                     },

@@ -3,9 +3,6 @@ import { TouchableOpacity, View, Text, Image } from "react-native";
 import { style } from "./styles";
 import { Back, Logo, } from "@/src/constants/Icons";
 
-
-
-
 export default function Home() {
 
     return (

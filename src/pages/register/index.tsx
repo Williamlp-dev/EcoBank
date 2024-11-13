@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParamList } from "@/src/navigation/types";
@@ -17,10 +17,8 @@ export default function Register() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 
-
     const handleRegister = () => {
         console.log('Usuário registrado:', { nome, cpf, dataNascimento, email, senha });
-
         navigation.navigate("Success");
     };
 

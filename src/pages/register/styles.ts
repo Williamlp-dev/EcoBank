@@ -24,6 +24,7 @@ export const styles = StyleSheet.create({
         position: "absolute",
         top: 45,
         left: 20,
+        zIndex: 1,
     },
     arrowIcon: {
         width: 20,

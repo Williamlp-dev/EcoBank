@@ -25,6 +25,7 @@ export const styles = StyleSheet.create({
         position: "absolute",
         top: 45,
         left: 20,
+        zIndex: 1,
     },
     arrowIcon: {
         width: 20,
@@ -49,17 +50,17 @@ export const styles = StyleSheet.create({
         marginTop: 5,
     },
 
-    // Adicionando a imagem acima dos inputs
+
     loginImage: {
-        width: 100,  // Ajuste o tamanho conforme necessário
+        width: 100,
         height: 100,
-        marginTop: 20,  // Ajuste o espaçamento conforme necessário
-        marginBottom: 30, // Espaco entre a imagem e os inputs
+        marginTop: 20,
+        marginBottom: 30,
     },
 
     inputsContainer: {
         width: "100%",
-        marginTop: 20,  // Ajuste conforme necessário para o espaçamento
+        marginTop: 20,
         paddingHorizontal: 30,
     },
 
