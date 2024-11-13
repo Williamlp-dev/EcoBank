@@ -10,6 +10,8 @@ export default function App() {
   const [loaded] = useFonts({
     Poppins: require('@/assets/fonts/Poppins-Regular.ttf'),
     PoppinsSemiBold: require('@/assets/fonts/Poppins-SemiBold.ttf'),
+    Montserrat: require('@/assets/fonts/Montserrat-VariableFont_wght.ttf'),
+    MontserratSemiBold: require('@/assets/fonts/Montserrat-SemiBold.ttf'),
   });
 
   if (!loaded) {

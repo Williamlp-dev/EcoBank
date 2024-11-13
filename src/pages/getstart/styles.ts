@@ -24,12 +24,12 @@ export const style = StyleSheet.create({
         paddingHorizontal: 80,
         borderRadius: 25,
         marginTop: 0,
-        marginBottom: 25,
+        marginBottom: 60,
     },
     buttonText: {
         color: '#fff',
         fontSize: 16,
-        fontFamily: 'PoppinsSemiBold',
+        fontFamily: 'MontserratSemiBold',
         marginRight: 15,
     },
 });

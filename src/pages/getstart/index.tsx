@@ -4,17 +4,17 @@ import { style } from "./styles";
 import { Logo, Arrow } from "@/src/constants/Icons";
 import Onboarding from "@/src/components/Onboarding";
 import { useNavigation } from "@react-navigation/native";
-import { StackNavigationProp } from "@react-navigation/stack"; // Importando a tipagem para navegação
-import { RootStackParamList } from "@/src/navigation/types"; // Importando o tipo de navegação
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParamList } from "@/src/navigation/types";
 
-// Tipando o tipo de navegação para a tela 'GetStart'
+
 type GetStartNavigationProp = StackNavigationProp<RootStackParamList, "GetStart">;
 
 export default function GetStart() {
-    const navigation = useNavigation<GetStartNavigationProp>(); // Aqui usamos a tipagem
+    const navigation = useNavigation<GetStartNavigationProp>();
 
     const goToNextScreen = () => {
-        navigation.navigate("Steps"); // TypeScript agora sabe que 'Steps' é uma rota válida
+        navigation.navigate("Steps");
     };
 
     return (

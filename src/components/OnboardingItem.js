@@ -36,18 +36,22 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        fontFamily: 'Poppins',
-        fontSize: 28,
+        fontFamily: 'PoppinsSemiBold',
+        fontSize: 24,
         marginBottom: 8,
         color: Color.white,
         textAlign: 'center',
+        paddingHorizontal: 32,
+        letterSpacing: 1,
     },
 
     description: {
-        fontWeight: '300',
+        fontFamily: 'Poppins',
+        fontSize: 16,
         color: Color.white,
         textAlign: 'center',
         paddingHorizontal: 64,
+        letterSpacing: 0.5,
 
 
     }
